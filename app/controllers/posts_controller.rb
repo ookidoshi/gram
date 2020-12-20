@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.photos.present?
+      @post.save
 
 
 
