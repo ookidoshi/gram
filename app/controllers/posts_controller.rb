@@ -21,6 +21,10 @@ before_action:authenticate_user!
     end
   end
 
+  def index
+    @posts = Post.limit(10).order('created_at DESC')
+  end
+
 
 
     private
