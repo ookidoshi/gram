@@ -22,7 +22,7 @@ before_action:authenticate_user!
   end
 
   def index
-    @posts = Post.limit(10).order('created_at DESC')
+    @posts = Post.limit(10).includes(:photos,:user).order('created_at DESC')
   end
 
 
